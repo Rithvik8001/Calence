@@ -7,6 +7,9 @@ const envSchema = z.object({
     .enum(['development', 'test', 'production'])
     .default('development'),
   PORT: z.coerce.number().int().min(1).max(65_535).default(4000),
+  LOG_LEVEL: z
+    .enum(['trace', 'debug', 'info', 'warn', 'error', 'fatal', 'silent'])
+    .default('info'),
   DATABASE_URL: z.string().min(1).default('file:data/calence.db'),
 });
 

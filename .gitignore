@@ -13,3 +13,6 @@ apps/api/data/
 .DS_Store
 .idea/
 .vscode/
+
+AGENTS.md
+CLAUDE.md

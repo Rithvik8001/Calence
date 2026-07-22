@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
+import { LoggerModule } from 'nestjs-pino';
 
-import { DatabaseModule } from './database/database.module.js';
+import { loggerConfig } from './config/logger.js';
 import { HealthModule } from './modules/health/health.module.js';
 
 @Module({
-  imports: [DatabaseModule, HealthModule],
+  imports: [LoggerModule.forRoot(loggerConfig), HealthModule],
 })
 export class AppModule {}
