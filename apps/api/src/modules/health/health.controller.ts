@@ -1,9 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller()
-export class AppController {
-  @Get('health')
-  health() {
+@Controller('health')
+export class HealthController {
+  @Get()
+  check() {
     return { status: 'ok' } as const;
   }
 }

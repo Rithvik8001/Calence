@@ -9,11 +9,13 @@
   },
   "scripts": {
     "build": "pnpm --filter @calence/api build",
+    "db:generate": "pnpm --filter @calence/api db:generate",
+    "db:migrate": "pnpm --filter @calence/api db:migrate",
+    "db:studio": "pnpm --filter @calence/api db:studio",
     "dev": "pnpm --filter @calence/api dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
-    "test": "pnpm --filter @calence/api test",
     "typecheck": "pnpm --filter @calence/api typecheck"
   },
   "devDependencies": {
